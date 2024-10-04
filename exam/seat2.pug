@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")#start
+
+  include header.pug
+
+  .seat.container.column.bg-white
+    h2 Парк-отель «Чайка»
+    img(src="./img/chayka.png", alt="")
+    h3 Зоны локации:
+    .zones 
+      .zone 
+        .text 
+          p Летний домик
+          p Вместимость - до 5 чел
+          p 400р/час
+        +button('Забронировать', './booking.html', 'bg-orange button white')
+      .zone 
+        .text 
+          p Шатер
+          p Вместимость - до 10 чел
+          p 700р/час
+        +button('Забронировать', './booking.html', 'bg-orange button white')
+      .zone 
+        .text 
+          p Беседка
+          p Вместимость - до 5 чел
+          p 200р/час
+        +button('Забронировать', './booking.html', 'bg-orange button white')
+      .zone 
+        .text 
+          p Бассейн с зоной отдыха
+          p Вместимость - до 15 чел
+          p 200р/час
+        +button('Забронировать', './booking.html', 'bg-orange button white')
+
+
+  include footer.pug

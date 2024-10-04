@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")#start
+
+  include header.pug
+
+  section.locations.container
+    h2 Результаты поиска
+    .location 
+      .wrapper
+        img(src="./img/hotel.jpg", alt="")
+        .text-area
+          .wrapper
+            .text-block 
+              .text #[strong Регион:] Красноярский край
+              .text #[strong Локация:] Парк-отель «Чайка»
+              .text #[strong Адрес:] Ачинский район, с. Ключи,<br>Пионерская долина, 5
+              .text #[strong Дата:] 20.07
+              .text #[strong Время:] 15:00
+              .text #[strong Свободно зон:] 4
+            +button('Выбрать', './seat2.html', 'bg-orange button white m0')
+    .divider 
+    .location 
+      .wrapper.wrap-rvs
+        img(src="./img/camp.jpg", alt="")
+        .text-area
+          .wrapper
+            .text-block 
+              .text #[strong Регион:] Алтайский край
+              .text #[strong Локация:] Турбаза «Озеро Красилово»
+              .text #[strong Адрес:] Косихинский район, с. Озеро-Красилово,<br>ул. Пушкина, д.1
+              .text #[strong Дата:] 13.06
+              .text #[strong Время:] 17:00
+              .text #[strong Свободно зон:] 5
+            +button('Выбрать', './seat1.html', 'bg-orange button white')
+
+  include footer.pug

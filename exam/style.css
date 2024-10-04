@@ -1,0 +1,180 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #FF0051;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 315px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 7px 13px 15px;
+    background-color: #FF0095;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    margin-top: 26px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.algorithm {
+    margin-top: 80px;
+    margin-left: 7px;
+}
+
+.algorithm ol {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.title {
+    color: red;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.info {
+    margin-top: 80px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.images img {
+    width: 350px;
+}
+
+.paragraph {
+    margin-top: 10px;
+}
+
+.reviews {
+    margin-top: 80px;
+}
+
+.review {
+    margin: 14px 0;
+}
+
+.name {
+    color: #3700FF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.comment {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.yet {
+    color: #FF6F00;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+
+    margin-top: 38px;
+}
+
+.yet a {
+    text-decoration: none;
+}
+
+.promotions {
+    margin-top: 80px;
+}
+
+.search {
+    margin-top: 80px;
+}
+
+.search button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    color: white;
+    background-color: #FB00CD;
+    font-size: 36px;
+    font-weight: 700;
+    padding: 6px 15px;
+    border-radius: 15px;
+    border-width: 0;
+}
+
+form {
+    margin: 7px 0;
+}
+
+input {
+    border-radius: 6px;
+    padding: 5px 35px;
+}
+
+.input-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+    gap: 64px;
+}
+
+.subscription button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    color: white;
+    background-color: red;
+    font-size: 36px;
+    font-weight: 700;
+    padding: 6px 15px;
+    border-radius: 15px;
+    border-width: 0;
+}
+
+.footer {
+    background-color: #FF5500;
+    margin-top: 80px;
+    padding: 85px 0 100px;
+}
+
+.footer img {
+    margin-top: 30px;
+}
+
+.phone {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}

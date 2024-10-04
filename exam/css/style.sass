@@ -1,0 +1,527 @@
+@import mixins
+@import my_normalize
+@import support
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,100..900;1,100..900&&display=swap"
+@import "https://fonts.googleapis.com/css?family=Noto+Sans:ital,wght@0,100..900;1,100..900&&display=swap"
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+@import "https://fonts.googleapis.com/css?family=Inter:ital,wght@0,100..900;1,100..900&&display=swap"
+    
+$background-color: #DEDEDE
+$blue: #225560
+$orange: #F0803C
+$light-blue: #3A8899
+$yellow: #FEFFE2
+$dark: #171219
+$gray: #8D8D8D
+$purple: #310D20
+$aqua: #58B4C7
+
+$default-font: Inter, Arial, Helvetica, sans-serif
+$sans: 'Open Sans', Arial, Helvetica, sans-serif
+$noto: 'Noto Sans', Arial, Helvetica, sans-serif
+$big-num: Montserrat, Arial, Helvetica, sans-serif
+
+
+$column-width: 415px
+$column-mobiles: 351px
+
+body
+  width: 960px
+  margin: 0 auto
+  +mobiles()
+    width: 100%
+  +bg($background-color)
+  +lh(1.4)
+    
+h2
+  +font($sans, 36px, 700)
+  +mobiles()
+    font-size: 30px
+  +phone()
+    text-align: center
+
+h3
+  +font($sans, 28px, 700)
+  +phone()
+    font-size: 24px
+    text-align: center
+
+input
+  +font($noto, 24px)
+  padding: 10px
+  +mobiles()
+    font-size: 20px
+    padding: 8px 10px
+  +phone()
+    font-size: 18px
+  border-radius: 10px
+  border: 1px solid $gray
+  line-height: 32px
+
+.container
+  padding-left: 40px
+  padding-right: 40px
+  margin: 0 auto
+  +mobiles()
+    padding-left: 20px
+    padding-right: 20px
+  +phone()
+    width: 94vw
+    padding-left: 3vw
+    padding-right: 3vw
+
+.yellow
+  color: $yellow
+
+.white
+  color: white
+
+.bg-orange
+  +bg($orange)
+
+.bg-blue
+  +bg($blue)
+
+.bg-white
+  +bg(white)
+
+.mtb-40
+  margin-top: 40px
+  margin-bottom: 40px
+
+header
+  padding: 40px 0
+  +bg($blue)
+  color: white
+  .wrapper
+    +row()
+    +space-between()
+    +align-center()
+    +font($default-font)
+    .logo
+      width: 140px
+      +phone()
+        width: 120px
+
+.menu
+  +font($sans, 16px)
+  +mobiles()
+    +font($sans, 14px)
+  +phone()
+    +font($sans, 12px)
+  a
+    color: white
+    &:hover
+      color: $yellow
+  ul
+    +row()
+    gap: 10px
+
+.button
+  border: none
+  border-radius: 10px
+  padding: 10px 30px
+  +font($sans, 24px)
+  +phone()
+    +center()
+    padding: 7px 20px
+    font-size: 20px
+
+section
+  +bg(white)
+  padding: 80px 0
+
+.booking
+  .wrapper
+    +space-between()
+    margin-top: 40px
+    +row()
+    +phone()
+      +column-reverse()
+      gap: 20px
+    .left-side
+      +flex()
+      +column()
+      gap: 30px
+      width: $column-width
+      +mobiles()
+        gap: 20px
+        width: $column-mobiles
+      +phone()
+        gap: 10px
+      .row
+        gap: 20px
+        +phone()
+          gap: 10px
+          align-items: baseline
+        .number
+          +font($big-num, 48px, 800)
+          +mobiles()
+            font-size: 42px
+          +phone()
+            font-size: 24px
+            margin-top: 1px
+          +lh(1)
+          font-style: italic
+          color: $orange
+        .text
+          +font($noto, 24px, 400)
+          +mobiles()
+            font-size: 20px
+          +phone()
+            font-size: 16px
+    .right-side
+      width: $column-width
+      +mobiles()
+        width: $column-mobiles
+      img
+        box-shadow: 20px 25px 0px 0px $blue
+        width: calc(100% - 20px)
+        +phone()
+          box-shadow: none
+          width: 100%
+
+.info
+  +flex()
+  +column()
+  overflow-x: hidden
+  color: white
+  +bg($light-blue)
+  gap: 40px
+  .text
+    +font($noto, 18px)
+    +phone()
+      font-size: 16px
+  .testimonials
+    +flex()
+    gap: 20px
+    padding-top: 40px
+    .testimonial
+      +column()
+      +space-between()
+      +align-end()
+      flex-shrink: 0
+      box-sizing: border-box
+      width: 460px
+      border-radius: 10px
+      gap: 10px
+      color: $dark
+      +bg(white)
+      padding: 25px
+      +font($sans, 18px)
+      +phone()
+        width: 80%
+        font-size: 16px
+      .sign
+        color: $orange
+
+.search
+  .wrapper
+    +row()
+    +space-between()
+    margin-top: 60px
+    +phone()
+      +column-reverse()
+      gap: 40px
+    form
+      a
+        +column()
+      +column()
+      width: $column-width
+      gap: 40px
+      +mobiles()
+        width: $column-mobiles
+        gap: 35px
+      +phone()
+        width: 100%
+      input
+        &[type='button']
+          color: white
+          +bg($orange)
+          align-self: end
+          border: none
+          padding: 10px 30px
+          &:hover
+            cursor: pointer
+          +phone()
+            align-self: center
+    .right-side
+      width: $column-width
+      +mobiles()
+        width: $column-mobiles
+      img
+        width: calc(100% - 20px)
+        box-shadow: 20px 17px 0px 0px $blue
+        +phone()
+          box-shadow: none
+          width: 100%
+
+.promotions
+  +column()
+  gap: 80px
+  +font($noto, 18px)
+  +phone()
+    font-size: 16px
+  color: white
+  +bg($aqua)
+  padding-top: 120px
+  padding-bottom: 120px
+  +mobiles()
+    h2
+      +center()
+    gap: 60px
+    padding-top: 100px
+    padding-bottom: 100px
+  +phone()
+    gap: 50px
+    padding-top: 80px
+    padding-bottom: 80px
+  .promo
+    +column()
+    gap: 40px
+    .wrapper
+      +row()
+      +space-between()
+      +phone()
+        +column()
+        gap: 30px
+      &.wrap-rvs
+        +row-reverse()
+        +phone()
+          +column()
+      img
+        width: $column-width
+        border-radius: 28px
+        +mobiles()
+          width: $column-mobiles
+      .text-area
+        +column()
+        width: $column-width
+        +mobiles()
+          width: $column-mobiles
+        .wrapper
+          +column()
+          +space-between()
+          height: 100%
+          .disclaimer
+            +font($noto, 14px)
+            align-self: end
+          .wrapper-2
+            gap: 20px !important
+            +column()
+            .button
+              margin-top: 30px
+              align-self: end
+              +mobiles()
+                margin-top: 10px
+                margin-bottom: 20px
+            .text-block
+              +column()
+              gap: 5px
+              +font($noto, 16px)
+            ul
+              list-style-position: outside
+              padding-left: 26px
+              li
+                list-style-type: disc
+  .divider
+    +bg(white)
+    height: 1px
+    width: 60%
+    margin: 0 auto
+
+.subscribe
+  gap: 40px
+  form
+    gap: 30px
+    +phone()
+      +center()
+      flex-direction: column
+      width: 85%
+      input
+        width: unset
+  
+.footer
+  +space-between()
+  +phone()
+    +column()
+    gap: 40px
+  .map
+    width: $column-width
+    +mobiles()
+      width: $column-mobiles
+  .information
+    +phone()
+      gap: 40px
+    .contact
+      gap: 20px
+      +font($noto, 24px)
+      +mobiles()
+        font-size: 20px
+        gap: 10px
+      +phone()
+        font-size: 16px
+        .phone, .email
+          align-items: center
+    .menu
+      +phone()
+        align-self: center
+        ul
+          gap: 40px
+
+.locations
+  +column()
+  gap: 80px
+  +font($noto, 18px)
+  +phone()
+    font-size: 16px
+  padding-top: 120px
+  padding-bottom: 120px
+  +mobiles()
+    h2
+      +center()
+    gap: 60px
+    padding-top: 100px
+    padding-bottom: 100px
+  +phone()
+    gap: 50px
+    padding-top: 80px
+    padding-bottom: 80px
+  .location
+    +column()
+    gap: 80px
+    .wrapper
+      +row()
+      +space-between()
+      +mobiles()
+        gap: 50px
+      +phone()
+        +column()
+        gap: 30px
+      &.wrap-rvs
+        +row-reverse()
+        +phone()
+          +column()
+      img
+        width: $column-width
+        border-radius: 28px
+        +mobiles()
+          width: $column-mobiles
+      .text-area
+        +column()
+        width: $column-width
+        +phone()
+          width: 100%
+        .wrapper
+          +column()
+          +space-between()
+          height: 100%
+          .button
+            align-self: end
+            +phone()
+              align-self: center
+          .text-block
+            +column()
+            gap: 5px
+            +font($noto, 16px)
+  .divider
+    +bg(black)
+    height: 1px
+    width: 60%
+    margin: 0 auto
+
+.seat
+  +font($noto, 18px)
+  padding-top: 80px
+  padding-bottom: 80px
+  gap: 60px
+  +phone()
+    font-size: 10px
+  .button
+    font-size: 16px
+    padding: 7px 15px
+    +phone()
+      font-size: 12px
+      padding: 5px 10px
+  h3
+    margin-top: 20px
+    +phone()
+      margin-top: 16px
+  .zones
+    +column()
+    gap: 30px
+    +phone()
+      gap: 25px
+    .zone
+      +flex()
+      +align-center()
+      gap: 50px
+      +phone()
+        gap: 45px
+      .text
+        width: $column-width
+
+.booking-page
+  +font($noto, 18px)
+  +phone()
+    font-size: 16px
+  .details, 
+  .options
+    padding-top: 80px
+    padding-bottom: 80px
+    gap: 40px
+    .more
+      +phone()
+        +column-reverse()
+        gap: 40px
+      .text-block
+        width: $column-width
+        +mobiles()
+          width: $column-mobiles
+        +phone()
+          width: 100%
+      .wrapper
+        width: $column-width
+        +phone()
+          width: 100%
+        img
+          box-shadow: 20px 25px 0px 0px $purple
+          width: calc(100% - 20px)
+          +mobiles()
+            width: $column-mobiles
+          +phone()
+            box-shadow: none
+  .options
+    +bg($aqua)
+    .more
+      .text-block
+        gap: 20px
+        .text
+          +align-start()
+          gap: 10px
+          img
+            width: 24px
+      .wrapper
+        img
+          box-shadow: 20px 25px 0px 0px $blue
+
+  form
+    padding-top: 60px
+    padding-bottom: 60px
+    gap: 40px
+    textarea
+      +font($noto, 24px)
+      width: $column-width
+      height: 210px
+      box-sizing: content-box
+      border-radius: 10px
+      padding: 20px 10px
+      resize: none
+      +phone()
+        width: 80%
+    input
+      width: $column-width
+      height: 53px
+      +phone()
+        width: 80%

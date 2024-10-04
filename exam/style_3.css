@@ -1,0 +1,71 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #FF0051;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.services {
+    margin-top: 80px;
+}
+
+.services ul {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.other {
+    margin-top: 80px;
+}
+
+.other p {
+    margin-top: 40px;
+}
+
+form {
+    margin: 15px 0;
+}
+
+input {
+    border-radius: 6px;
+    padding: 5px 35px;
+}
+
+.dop-comment input {
+    width: 160px;
+    border-radius: 6px;
+    padding: 120px 56px;
+}
+
+.input-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+    gap: 64px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    color: white;
+    background-color: #0106FD;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 13px 14px;
+    border-radius: 8px;
+    border-width: 0;
+}

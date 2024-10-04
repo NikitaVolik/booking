@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")#start
+
+  include header.pug
+
+  .booking-page
+    .details.column.bg-orange.white.container 
+      h2 Данные о заказе
+      .more.flex.space-between  
+        .text-block.column.space-between 
+          .text #[strong Регион:] Красноярский край
+          .text #[strong Локация:] Парк-отель «Чайка»
+          .text #[strong Адрес:] Ачинский район, с.Ключи, Пионерская долина, 5
+          .text #[strong Дата:] 20.07
+          .text #[strong Время:] 15:00
+          .text #[strong Выбранные зоны:] Бассейн с зоной отдыха
+          .text #[strong Количество человек:] 5
+          .text #[strong Стоимость:] 200р/час
+        .wrapper
+          img(src="./img/group.jpg", alt="")
+    .options.column.container.white
+      h3 Дополнительные услуги
+      .more.flex.space-between  
+        .text-block.column
+          .text #[img(src='./img/checkbox.svg')] Услуги фотографа - 2000р/час
+          .text #[img(src='./img/checkbox.svg')] Реквизит для съемок - от 500р/час
+          .text #[img(src='./img/checkbox.svg')] Моментальная печать фотографий - 30р/шт
+          .text #[img(src='./img/checkbox.svg')] Услуги такси - 50р + 10р за каждый км
+        .wrapper
+          img(src="./img/christmas.jpg", alt="")
+    form(action="").column.align-center.container.bg-white
+      textarea(name="comment", placeholder="Комментарий к заказу")
+      input(type="text", placeholder="Email")
+      .text #[strong Итоговая стоимость:] 1000р
+      +button("Забронировать", '#', 'bg-blue button white')
+  include footer.pug

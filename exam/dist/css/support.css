@@ -1,0 +1,50 @@
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.flex, .column-reverse, .row-reverse, .align-end, .align-start, .align-center, .space-between {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.m0 {
+  margin: 0;
+}

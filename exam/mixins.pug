@@ -1,0 +1,13 @@
+mixin step(num, text)
+  .row.align-center
+    .number= num
+    .text= text
+
+mixin button(text, link, class_name)
+  a(class=class_name, href=link)= text
+
+mixin menu()
+  ul 
+    li: a(href='#') Акции
+    li: a(href='#') Поиск
+    li: a(href='#') Бронирование

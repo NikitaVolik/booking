@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")#start
+
+  include header.pug
+
+  .seat.container.column.bg-white
+    h2 Турбаза «Озеро Красилово»
+    img(src="./img/krasilovo.png", alt="")
+    h3 Зоны локации:
+    .zones 
+      .zone 
+        .text 
+          p Шатер
+          p Вместимость - до 5 чел
+          p 500р/час
+        +button('Забронировать', './booking.html', 'bg-orange button white')
+      .zone 
+        .text 
+          p Летний домик
+          p Вместимость - до 10 чел
+          p 300р/час
+        +button('Забронировать', './booking.html', 'bg-orange button white')
+      .zone 
+        .text 
+          p Беседка
+          p Вместимость - до 5 чел
+          p 200р/час
+        +button('Забронировать', './booking.html', 'bg-orange button white')
+      .zone 
+        .text 
+          p Профессиональная фотостудия
+          p Вместимость - до 10 чел
+          p 300р/час
+        +button('Забронировать', './booking.html', 'bg-orange button white')
+      .zone 
+        .text 
+          p Пирс у озера
+          p Вместимость - до 15 чел
+          p 200р/час
+        +button('Забронировать', './booking.html', 'bg-orange button white')
+
+
+  include footer.pug
